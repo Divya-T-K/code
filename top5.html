@@ -49,6 +49,28 @@
        background-color: #cae8ca;
        border: 2px solid #4CAF50;
        }
+       .display{
+        display: inline-block;
+       }
+       .flex-container {
+        display: flex;
+        flex-direction:row-reverse;/*To print in column we can give column*/
+        background-color:#4CAF50;
+        border: 2px solid black;
+        padding: 80px;
+        justify-content:space-evenly;
+        height: 50vh;
+        align-items:end;
+       }
+       .flex-container div{/*or we can give item class for that four flex*/
+        background-color: aqua;
+        border: 2px solid black;
+        height: 100px;
+        width: 100px;
+       }
+       .two{
+       /*flex-grow: 1;*/
+       }
     </style>
         <h1>Top <b>Five</b> Movies</h1>
         <ol type="i">
@@ -67,10 +89,18 @@
             <p>from relative</p>
           </div>
       </div>
-      <div class="page"><p class="fixed">fixed content</h1></div> 
+      <div class="page"><h1 class="fixed">fixed content</h1></div> 
        <div class="page"><h1 class="fixed">fixed content</h1></div>
        <div class="page"><h1 class="sticky">I am sticky!</h1><p class="fixed">This is sticky page</p></div>
        <div class="page"><h1 class="fixed">fixed content</h1></div>   
+       <h3 class="display">Display</h3>
+       <h4 class="display">next</h4>
+       <div class="flex-container">
+         <div class="one">1</div>
+         <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+       </div>
     
 
 </body>

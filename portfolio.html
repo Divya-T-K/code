@@ -7,8 +7,34 @@
 </head>
 <body>
     <style>
+      body{
+        background-image: url(jeevi.jpeg);
+        background-repeat: no-repeat;
+        background-size:contain;
+      }
       hr{
         float: left;
+      }
+      .navbar{
+        display: flex;
+        background-color: black;
+        height: 10vh;
+        justify-content:space-between;
+        justify-content: center;
+        flex-direction: row;
+        padding: 10px;
+        border: 2px solid grey;
+        align-items: center;
+      }
+      .navbar div{
+        background-color: aliceblue;
+        border: 2px solid gray;
+      }
+      .four{
+        grid-column-start: 1 ;
+        grid-column-end:5 ;
+        grid-column-start: 1;
+        grid-column-end:5;
       }
     </style>
     <h1>Introduction</h1>
@@ -40,8 +66,13 @@
     <p><b>Email:</b><a href="mailto:kamalavenidivya28@gmail.com?subject=Example Subject&body=Hello,%20this%20is%20a%20test.">Click here to send an email</a></p><br>
     <p><b>Linkedin:</b><a href="https://www.linkedin.com/in/divya-thangaraj-b4a19b321/">To view Linkedin Profile</a></p><br>
     <p><b>GitHub:</b><a href="https://github.com/Divya-T-K">To view GitHub Profile</a></p>
-
-
+    <hr style="width: 100%;"><br>
+    <div class="navbar">
+        <div class="items1"><a href="">Home</a></div>
+        <div class="items2"><a href="">About</a></div>
+        <div class="items3"><a href="">Contact</a></div>
+    </div>
+      
 </p>
 </body>
 </html>

@@ -8,13 +8,27 @@
 
 <body>
     <style>
-        body{
-            background-color: black;
-            color:white;
-        }
+        
         img{
             width: 120px;
             height: 120px;
+        }
+        .one{
+            background-color: palevioletred;
+        }
+        @media (max-width:468px){
+            .nav{
+                display: flex;
+                flex-direction: column;
+                color:#1f2937;
+
+            }
+            .felt{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            
         }
     </style>
     <a href="about.html">go to about page</a>
@@ -36,7 +50,49 @@
     <input type="submit" value="submit"></form>
     
     <iframe width="560" height="315" src="https://www.youtube.com/embed/wKFFegtNiYQ?si=AIKcC3lW7ZoCgXNP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="feel">
+        <nav>
+          <ul class="felt">
+            <li class="felt">Home</li>
+            <li class="felt">About</li>
+            <li class="felt">Contact</li>
+          </ul>
+       </nav>
+    </div>
 
-
+    </nav>
+    <input type="text" id="name">
+    <button onclick=showName()>Click</button>
+    <h1 id="result1">Hello</h1>
+    <script>
+        function showName(){
+            const name=document.getElementById('name').value;
+            document.getElementById('result1').innerText=`Hi ${name} how can I help you` 
+        }
+    </script>
+    <center>
+    <h1>Stone Paper scissor</h1>
+    <button class="one" onclick="game('stone')">🪨Stone</button>
+    <button class="one" onclick="game('paper')">📃Paper</button>
+    <button class="one" onclick="game('scissor')">✂️Scissor</button>
+    <h1 id="result2"> </h1></center>
+    <script>
+        function game(user){
+         const choices =['stone','paper','scissor']
+         let computer=choices[Math.floor(Math.random()*3)]
+        let result=''
+        if(user===computer){
+            result=`You have choosed ${user} computer choosed ${computer} So the match is draw 🤝`
+        }
+        else if((user==='rock'&& computer==='paper')||(user==='paper' && computer==='scissor')||(user==='scissor' && computer==='rock'))
+        {
+            result=`You lose the game 👎`
+        }
+        else{
+            result=`You Won the game 🥳`
+        }
+        document.getElementById('result2').innerText=result
+    }
+</script>
 </body>
 </html>
